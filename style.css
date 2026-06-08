@@ -106,6 +106,17 @@ section {
   background-clip: text;
 }
 
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  transition: var(--transition);
+}
+
+.header.scrolled .logo-img {
+  height: 35px;
+}
+
 .nav { display: flex; gap: 2rem; align-items: center; }
 
 .nav a {
