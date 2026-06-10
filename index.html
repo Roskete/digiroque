@@ -31,7 +31,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     /* ========================================
@@ -73,7 +73,7 @@
     html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: 80px; }
 
     body {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
       background: var(--bg-dark);
       color: var(--text);
       line-height: 1.7;
@@ -161,7 +161,7 @@
       font-family: 'Space Grotesk', sans-serif;
       font-size: 1.5rem;
       font-weight: 700;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       background: var(--gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -295,20 +295,17 @@
       font-weight: 700;
       line-height: 1.1;
       margin-bottom: 1.5rem;
-      letter-spacing: -0.5px;
+      letter-spacing: -0.03em;
     }
     .hero h1 span {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--accent);
     }
     .hero h1 .line { display: block; }
 
     .hero-subtitle {
       font-size: clamp(1.05rem, 2vw, 1.25rem);
       color: var(--text-muted);
-      max-width: 650px;
+      max-width: 680px;
       margin: 0 auto 1rem;
       line-height: 1.8;
     }
@@ -427,9 +424,9 @@
     .section-label {
       display: inline-block;
       font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 2px;
+      font-weight: 600;
       text-transform: uppercase;
+      letter-spacing: 1px;
       color: var(--accent);
       margin-bottom: 0.8rem;
     }
@@ -441,14 +438,11 @@
       letter-spacing: -0.3px;
     }
     .section-header h2 span {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--accent);
     }
     .section-header p {
       color: var(--text-muted);
-      max-width: 580px;
+      max-width: 620px;
       margin: 0 auto;
       font-size: 1.05rem;
     }
@@ -558,10 +552,7 @@
       line-height: 1.2;
     }
     .why-us-content h3 span {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--accent);
     }
     .why-us-content > p {
       color: var(--text-muted);
@@ -627,10 +618,7 @@
       font-family: 'Space Grotesk', sans-serif;
       font-size: 3.5rem;
       font-weight: 700;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--accent);
       line-height: 1;
     }
     .why-us-card .card-stat .label {
@@ -1021,10 +1009,7 @@
       margin-bottom: 1rem;
     }
     .contact-info h3 span {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--accent);
     }
     .contact-info > p {
       color: var(--text-muted);
@@ -1172,10 +1157,7 @@
       font-size: 1.3rem;
       font-weight: 700;
       letter-spacing: 2px;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--accent);
       display: inline-block;
       margin-bottom: 0.8rem;
     }
@@ -1342,11 +1324,8 @@
       font-family: 'Space Grotesk', sans-serif;
       font-size: 2rem;
       font-weight: 700;
-      letter-spacing: 4px;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      letter-spacing: 2px;
+      color: var(--accent);
       margin-bottom: 1.5rem;
     }
     .preloader-bar {
