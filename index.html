@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DIGIROQUE | Consultoría en IA, DeFi y Automatización para PYMES</title>
-  <meta name="description" content="DIGIROQUE potencia tu PYME con Inteligencia Artificial, DeFi, Comercio Online y Automatización con Agentes de IA. Más ventas, menos trabajo manual.">
+  <title>DIGIROQUE | Consultoría en IA y Automatización para PYMES</title>
+  <meta name="description" content="DIGIROQUE potencia tu PYME con Inteligencia Artificial, Comercio Online y Automatización con Agentes de IA. Más ventas, menos trabajo manual.">
   <meta name="author" content="Roque Jiménez">
 
   <!-- Open Graph -->
   <meta property="og:title" content="DIGIROQUE | Consultoría en IA para PYMES">
-  <meta property="og:description" content="Potenciando PYMES con Inteligencia Artificial, DeFi y Automatización. Consulta gratuita.">
+  <meta property="og:description" content="Potenciando PYMES con Inteligencia Artificial y Automatización. Consulta gratuita.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/images/logo-main.jpg">
   <meta property="og:url" content="https://digiroque.vercel.app">
@@ -17,8 +17,8 @@
 
   <!-- Twitter/X Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="DIGIROQUE | Consultoría en IA, DeFi y Automatización para PYMES">
-  <meta name="twitter:description" content="Potenciando PYMES con Inteligencia Artificial, DeFi y Automatización. Más ventas, menos trabajo manual.">
+  <meta name="twitter:title" content="DIGIROQUE | Consultoría en IA y Automatización para PYMES">
+  <meta name="twitter:description" content="Potenciando PYMES con Inteligencia Artificial y Automatización. Más ventas, menos trabajo manual.">
   <meta name="twitter:image" content="assets/images/logo-main.jpg">
   <meta name="twitter:creator" content="@digiroque">
 
@@ -703,7 +703,166 @@
     }
 
     /* ========================================
-       SERVICES
+       ABOUT / SOBRE MI SECTION
+       ======================================== */
+    .about {
+      padding: 7rem 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .about-photo-col {
+      position: sticky;
+      top: 100px;
+    }
+
+    .about-photo-wrap {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-photo {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius-lg);
+      border: 2px solid rgba(128,0,32,0.3);
+      transition: var(--transition);
+    }
+
+    .about-photo:hover {
+      border-color: rgba(192,0,48,0.5);
+      transform: scale(1.02);
+    }
+
+    .about-photo-badge {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      background: var(--gradient);
+      color: var(--white);
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .about-quote {
+      background: var(--gradient-soft);
+      border-left: 3px solid var(--accent);
+      padding: 1.2rem 1.5rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .about-quote p {
+      font-style: italic;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .about-content h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .about-content h2 span {
+      color: var(--accent);
+    }
+
+    .about-content p {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      line-height: 1.85;
+      margin-bottom: 1.2rem;
+    }
+
+    .about-content strong {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .about-credentials {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin: 2rem 0;
+    }
+
+    .credential {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1.2rem;
+      background: var(--bg-card);
+      border: 1px solid rgba(128,0,32,0.12);
+      border-radius: var(--radius);
+      transition: var(--transition);
+    }
+
+    .credential:hover {
+      border-color: rgba(192,0,48,0.25);
+      transform: translateX(4px);
+    }
+
+    .credential-icon {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      background: var(--gradient-soft);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .credential-text h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+      color: var(--text);
+    }
+
+    .credential-text p {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+
+    .about-cta {
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .about-photo-col {
+        position: relative;
+        top: 0;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+      .about-photo {
+        max-width: 300px;
+      }
+    }
+
+    /* ========================================
+       SERVICES SECTION
        ======================================== */
     .services {
       padding: 5rem 0;
@@ -712,8 +871,14 @@
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .service-card {
@@ -1537,7 +1702,7 @@
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "DIGIROQUE",
-    "description": "Consultoría en Inteligencia Artificial, DeFi, Comercio Online y Automatización con Agentes de IA para PYMES.",
+    "description": "Consultoría en Inteligencia Artificial, Comercio Online y Automatización con Agentes de IA para PYMES.",
     "url": "https://digiroque.com",
     "logo": "assets/images/logo-main.jpg",
     "founder": {
@@ -1548,7 +1713,7 @@
       "@type": "Country",
       "name": "Chile"
     },
-    "serviceType": ["Inteligencia Artificial", "DeFi y Blockchain", "Comercio Online", "Automatización con Agentes IA"],
+    "serviceType": ["Inteligencia Artificial", "Comercio Online", "Automatización con Agentes IA"],
     "priceRange": "$299 - $999",
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -1612,15 +1777,15 @@
           Consultoría Especializada en PYMES
         </div>
         <h1 class="fade-in delay-1">
-          <span class="line">Haz que tu negocio trabaje</span>
-          <span class="line"><span>más inteligente</span>, no más</span>
+          <span class="line">¿Tu competencia ya usa IA</span>
+          <span class="line">y tú aún haces <span>todo a mano</span>?</span>
         </h1>
         <p class="hero-subtitle fade-in delay-2">
-          Implementamos Inteligencia Artificial, automatización y estrategias digitales que multiplican tus ventas y liberan tu tiempo para enfocarte en lo que realmente importa.
+          Cada día que pasa sin automatizar tu negocio, pierdes horas, dinero y clientes. DIGIROQUE te ayuda a ponerte al día en semanas, no en años.
         </p>
         <div class="hero-value-prop fade-in delay-2">
-          <span class="check">✓</span> Consulta diagnóstica gratuita
-          <span class="check" style="margin-left:0.5rem">✓</span> Resultados desde la primera semana
+          <span class="check">✓</span> Diagnóstico gratuito de 30 minutos
+          <span class="check" style="margin-left:0.5rem">✓</span> Sin saber tecnología
         </div>
         <div class="hero-buttons fade-in delay-3">
           <a href="#contacto" class="btn-primary">
@@ -1708,68 +1873,60 @@
   <!-- ==========================================
        WHY CHOOSE US
        ========================================== -->
-  <section class="why-us" id="nosotros">
+  <section class="about" id="nosotros">
     <div class="container">
-      <div class="why-us-grid">
-        <div class="why-us-content fade-in">
-          <span class="section-label">¿Por Qué DIGIROQUE?</span>
-          <h3>Tecnología avanzada,<br><span>implementación simple</span></h3>
-          <p>No necesitas ser experto en tecnología. Nosotros nos encargamos de toda la implementación mientras tú te enfocas en hacer crecer tu negocio. Nuestro enfoque es práctico, orientado a resultados y sin jerga técnica innecesaria.</p>
-          <div class="why-us-features">
-            <div class="why-feature">
-              <div class="why-feature-icon">🏆</div>
-              <div class="why-feature-text">
-                <h4>Experiencia Comprobada</h4>
-                <p>Más de 6 años combinando logística, tecnología y estrategia de negocio para PYMES reales.</p>
+      <div class="about-grid">
+        <div class="about-photo-col fade-in">
+          <div class="about-photo-wrap">
+            <img src="assets/images/roque-profile.jpg" alt="Roque Jiménez - Fundador de DIGIROQUE" class="about-photo" width="400" height="596" loading="lazy">
+            <div class="about-photo-badge">Fundador</div>
+          </div>
+          <div class="about-quote">
+            <p>"No soy un teórico de Silicon Valley. Soy alguien que ha estado en tu lugar, que entiende tu operación desde adentro."</p>
+          </div>
+        </div>
+        <div class="about-content fade-in delay-1">
+          <span class="section-label">Sobre Mí</span>
+          <h2>De las bodegas de Cuba<br><span>a la inteligencia artificial</span></h2>
+          <p>Mi nombre es <strong>Roque Jiménez</strong>. Soy cubano, agrónomo de formación y especialista en operaciones con más de 13 años de experiencia en el mundo real de los negocios.</p>
+          <p>Mi carrera comenzó en el sector financiero: trabajé como <strong>cajero de ventanilla</strong> y luego como <strong>cajero central (de bóveda)</strong> en el <strong>BFI — Banco Financiero Internacional</strong>, donde aprendí la importancia de la precisión, el control de procesos y la atención al cliente bajo presión.</p>
+          <p>Después pasé al sector logístico: durante más de 6 años trabajé en empresas como <strong>FAR</strong> (2012-2025) y <strong>Caribe Retail</strong> (2025-actual), gestionando operaciones de bodega, cadena de suministro, control de inventarios y distribución.</p>
+          <p>Y en ese camino descubrí algo: <em>el 70% del tiempo de una PYME se lo comen las tareas manuales</em>. Los dueños trabajan EN su negocio, no SOBRE su negocio. Eso me obsesioné. Empecé a buscar formas de automatizar, de usar datos, de aplicar inteligencia artificial a problemas que antes requerían 5 personas. Y funcionó.</p>
+          <p>Hoy ayudo a PYMES a hacer lo mismo que yo hice: <strong>dejar de perder tiempo en lo repetitivo y empezar a crecer de verdad</strong>.</p>
+          <div class="about-credentials">
+            <div class="credential">
+              <div class="credential-icon">🏛️</div>
+              <div class="credential-text">
+                <h4>BFI — Banco Financiero Internacional</h4>
+                <p>Cajero de ventanilla y cajero central (bóveda). Control de efectivo, procesos financieros y atención al cliente.</p>
               </div>
             </div>
-            <div class="why-feature">
-              <div class="why-feature-icon">🤝</div>
-              <div class="why-feature-text">
-                <h4>Enfoque Personalizado</h4>
-                <p>Cada negocio es único. Diagnosticamos tu situación específica y diseñamos soluciones a tu medida.</p>
+            <div class="credential">
+              <div class="credential-icon">📦</div>
+              <div class="credential-text">
+                <h4>FAR — 13 años (2012-2025)</h4>
+                <p>Logística, control de inventarios, cadena de suministro y gestión de bodegas.</p>
               </div>
             </div>
-            <div class="why-feature">
-              <div class="why-feature-icon">📊</div>
-              <div class="why-feature-text">
-                <h4>Resultados Medibles</h4>
-                <p>Trabajamos con métricas claras. Sabrás exactamente el ROI de cada inversión desde el primer mes.</p>
+            <div class="credential">
+              <div class="credential-icon">🛒</div>
+              <div class="credential-text">
+                <h4>Caribe Retail (2025-actual)</h4>
+                <p>Operaciones de retail, distribución y optimización de procesos comerciales.</p>
               </div>
             </div>
-            <div class="why-feature">
-              <div class="why-feature-icon">⚡</div>
-              <div class="why-feature-text">
-                <h4>Implementación Rápida</h4>
-                <p>Resultados desde la primera semana. No meses de espera para ver impacto real en tu negocio.</p>
+            <div class="credential">
+              <div class="credential-icon">🌱</div>
+              <div class="credential-text">
+                <h4>Agronomía (2012-actual)</h4>
+                <p>Formación en ciencias agrícolas. Visión integral de la cadena de valor del campo al mercado.</p>
               </div>
             </div>
           </div>
-        </div>
-        <div class="why-us-visual fade-in delay-2">
-          <div class="why-us-card">
-            <div class="card-stat">
-              <div class="big-number">100+</div>
-              <div class="label">PYMES Transformadas</div>
-            </div>
-            <div class="card-stats-row">
-              <div class="mini-stat">
-                <div class="num">6+</div>
-                <div class="lbl">Años de Experiencia</div>
-              </div>
-              <div class="mini-stat">
-                <div class="num">98%</div>
-                <div class="lbl">Clientes Satisfechos</div>
-              </div>
-              <div class="mini-stat">
-                <div class="num">24/7</div>
-                <div class="lbl">Soporte Continuo</div>
-              </div>
-              <div class="mini-stat">
-                <div class="num">4+</div>
-                <div class="lbl">Áreas de Expertise</div>
-              </div>
-            </div>
+          <div class="about-cta">
+            <a href="#contacto" class="btn-primary">
+              <span>Agendar Consulta Gratis →</span>
+            </a>
           </div>
         </div>
       </div>
@@ -1789,27 +1946,21 @@
       <div class="services-grid">
         <div class="service-card fade-in delay-1">
           <div class="service-icon">🤖</div>
-          <h3>Inteligencia Artificial</h3>
-          <p>Chatbots que venden, modelos que predicen demanda, sistemas que analizan datos y toman decisiones inteligentes por ti.</p>
+          <h3>Automatización con IA</h3>
+          <p>Chatbots que atienden clientes 24/7, sistemas que predicen demanda, agentes que gestionan inventario y automatizan tareas repetitivas. Tu equipo se enfoca en estrategia, no en papeleo.</p>
           <span class="service-tag">Más demandado</span>
         </div>
         <div class="service-card fade-in delay-2">
-          <div class="service-icon">⛓️</div>
-          <h3>DeFi y Blockchain</h3>
-          <p>Pagos digitales sin intermediarios, contratos inteligentes y estrategias de finanzas descentralizadas para tu negocio.</p>
-          <span class="service-tag">Futuro financiero</span>
-        </div>
-        <div class="service-card fade-in delay-3">
           <div class="service-icon">🛒</div>
           <h3>Comercio Online</h3>
-          <p>Tiendas virtuales optimizadas, marketing automation y estrategias de crecimiento que convierten visitantes en compradores.</p>
+          <p>Tiendas virtuales optimizadas, embudos de ventas automatizados y marketing digital que convierte visitantes en compradores. Tu negocio vende mientras duermes.</p>
           <span class="service-tag">Venta inmediata</span>
         </div>
-        <div class="service-card fade-in delay-4">
-          <div class="service-icon">⚙️</div>
-          <h3>Automatización con Agentes IA</h3>
-          <p>Agentes autónomos que atienden clientes, generan contenido, gestionan inventario y ejecutan tareas complejas por ti.</p>
-          <span class="service-tag">Productividad x10</span>
+        <div class="service-card fade-in delay-3">
+          <div class="service-icon">📊</div>
+          <h3>Consultoría de Digitalización</h3>
+          <p>Diagnóstico completo de tu operación, plan de acción personalizado y acompañamiento paso a paso. Sin jerga técnica, sin contratos largos, resultados medibles desde el día uno.</p>
+          <span class="service-tag">Plan a tu medida</span>
         </div>
       </div>
     </div>
@@ -1935,7 +2086,7 @@
             <li><span class="check-icon">✓</span> Todo lo del plan Professional</li>
             <li><span class="check-icon">✓</span> Automatización ilimitada</li>
             <li><span class="check-icon">✓</span> Múltiples agentes IA autónomos</li>
-            <li><span class="check-icon">✓</span> Integración DeFi/blockchain</li>
+            <li><span class="check-icon">✓</span> Dashboard de analytics avanzado</li>
             <li><span class="check-icon">✓</span> Dashboard de analytics avanzado</li>
             <li><span class="check-icon">✓</span> Consultor estratégico dedicado</li>
             <li><span class="check-icon">✓</span> SLA garantizado</li>
@@ -2060,7 +2211,6 @@
                 <option value="ia">Inteligencia Artificial</option>
                 <option value="automatizacion">Automatización con Agentes IA</option>
                 <option value="ecommerce">Comercio Online</option>
-                <option value="defi">DeFi y Blockchain</option>
                 <option value="all">Todos / No estoy seguro</option>
               </select>
             </div>
@@ -2093,7 +2243,6 @@
         <div class="footer-col">
           <h5>Servicios</h5>
           <a href="#servicios">Inteligencia Artificial</a>
-          <a href="#servicios">DeFi y Blockchain</a>
           <a href="#servicios">Comercio Online</a>
           <a href="#servicios">Automatización IA</a>
         </div>
