@@ -743,6 +743,31 @@
        ======================================== */
     .about {
       padding: 7rem 0;
+      background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-deep) 50%, var(--bg-dark) 100%);
+      position: relative;
+    }
+
+    /* Orbes decorativos que combinan con body::before */
+    .about::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(128,0,32,0.08) 0%, transparent 70%);
+      top: -100px;
+      left: -100px;
+      pointer-events: none;
+    }
+
+    .about::after {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(192,0,48,0.06) 0%, transparent 70%);
+      bottom: -50px;
+      right: -50px;
+      pointer-events: none;
     }
 
     .about-grid {
@@ -760,21 +785,54 @@
     .about-photo-wrap {
       position: relative;
       border-radius: var(--radius-lg);
-      overflow: hidden;
+      overflow: visible;
       margin-bottom: 1.5rem;
+    }
+
+    /* Fondo glow detrás de la foto que combina con el sitio */
+    .about-photo-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      background: var(--gradient);
+      border-radius: var(--radius-lg);
+      z-index: -1;
+      opacity: 0.6;
+      filter: blur(12px);
     }
 
     .about-photo {
       width: 100%;
       height: auto;
       border-radius: var(--radius-lg);
-      border: 2px solid rgba(128,0,32,0.3);
+      border: 2px solid rgba(128,0,32,0.4);
       transition: var(--transition);
+      position: relative;
+      z-index: 1;
+      /* Mezclar la foto clara con el fondo oscuro */
+      mix-blend-mode: luminosity;
+      /* Difuminar bordes para que no se note el corte */
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,1) 85%,
+        rgba(0,0,0,0.6) 92%,
+        rgba(0,0,0,0) 100%
+      );
+      mask-image: linear-gradient(
+        to bottom,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,1) 85%,
+        rgba(0,0,0,0.6) 92%,
+        rgba(0,0,0,0) 100%
+      );
     }
 
     .about-photo:hover {
-      border-color: rgba(192,0,48,0.5);
+      border-color: rgba(192,0,48,0.6);
       transform: scale(1.02);
+      mix-blend-mode: normal;
+      filter: brightness(1.1);
     }
 
     .about-photo-badge {
