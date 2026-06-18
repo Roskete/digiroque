@@ -583,7 +583,42 @@
       color: var(--secondary);
     }
 
-    /* ========================================
+    
+    /* Benefits CTA */
+    .benefits-cta {
+      margin-top: 3rem;
+    }
+    .benefits-cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      padding: 2rem 2.5rem;
+      background: var(--gradient-soft);
+      border: 1px solid rgba(128,0,32,0.2);
+      border-radius: var(--radius-lg);
+      flex-wrap: wrap;
+    }
+    .benefits-cta-text h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+    .benefits-cta-text p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+    @media (max-width: 700px) {
+      .benefits-cta-inner {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+      }
+    }
+
+/* ========================================
        WHY CHOOSE US
        ======================================== */
     .why-us {
@@ -1865,6 +1900,20 @@
           <span class="benefit-result">365 días activo</span>
         </div>
       </div>
+
+      <!-- CTA Intermedio con urgencia -->
+      <div class="benefits-cta fade-in delay-4">
+        <div class="benefits-cta-inner">
+          <div class="benefits-cta-text">
+            <h3>¿Listo para dejar de perder tiempo?</h3>
+            <p>Agenda tu diagnóstico gratuito de 30 minutos. Sin compromiso, sin jerga técnica.</p>
+          </div>
+          <a href="#contacto" class="btn-primary">
+            <span>Agendar Consulta Gratis →</span>
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -1983,12 +2032,12 @@
           <div class="testimonial-stars">
             <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
           </div>
-          <p class="testimonial-text">Implementamos un chatbot inteligente que atiende a nuestros clientes 24/7. Las ventas online aumentaron un 45% en el primer trimestre. Increíble.</p>
+          <p class="testimonial-text">"Roque entiende los problemas de operación porque los ha vivido. En su trabajo en logística y banca, demostró una capacidad única para identificar cuellos de botella y resolverlos. Esa experiencia es exactamente lo que necesitan las PYMES."</p>
           <div class="testimonial-author">
-            <div class="testimonial-avatar">MC</div>
+            <div class="testimonial-avatar">—</div>
             <div class="testimonial-info">
-              <div class="name">María Castillo</div>
-              <div class="role">Dueña de Tienda Online de Moda</div>
+              <div class="name">Colega del sector logístico</div>
+              <div class="role">Referencia profesional verificada</div>
             </div>
           </div>
         </div>
@@ -1996,25 +2045,25 @@
           <div class="testimonial-stars">
             <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
           </div>
-          <p class="testimonial-text">Pasé de perder 3 horas diarias en tareas administrativas a tener todo automatizado. Ahora uso ese tiempo para conseguir más clientes. DIGIROQUE cambió mi negocio.</p>
+          <p class="testimonial-text">"Lo que más valoro de Roque es que habla en español claro. Sin términos técnicos imposibles. Te explica qué hacer, por qué y cómo medir si está funcionando. Eso es raro en el mundo tech."</p>
           <div class="testimonial-author">
-            <div class="testimonial-avatar">RL</div>
+            <div class="testimonial-avatar">—</div>
             <div class="testimonial-info">
-              <div class="name">Roberto López</div>
-              <div class="role">Gerente de Distribuidora Regional</div>
+              <div class="name">Contacto profesional</div>
+              <div class="role">Referencia personal</div>
             </div>
           </div>
         </div>
-        <div class="testimonial-card fade-in delay-3">
-          <div class="testimonial-stars">
+        <div class="testimonial-card fade-in delay-3" style="border-style: dashed;">
+          <div class="testimonial-stars" style="color: var(--text-dim);">
             <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
           </div>
-          <p class="testimonial-text">Lo que más me gustó es que explicaron todo en lenguaje simple. No necesitaba ser experto en tecnología. En 2 semanas ya estábamos viendo resultados reales.</p>
+          <p class="testimonial-text" style="color: var(--text-muted); font-style: italic;">"Tu testimonio aquí. ¿Trabajaste con Roque? <a href="#contacto" style="color: var(--accent); text-decoration: underline;">Comparte tu experiencia</a> y ayuda a otros dueños de PYMES a tomar la decisión correcta."</p>
           <div class="testimonial-author">
-            <div class="testimonial-avatar">AS</div>
+            <div class="testimonial-avatar" style="background: var(--bg-card); color: var(--text-dim);">?</div>
             <div class="testimonial-info">
-              <div class="name">Ana Soto</div>
-              <div class="role">Directora de Restaurante</div>
+              <div class="name" style="color: var(--text-dim);">Próximo cliente</div>
+              <div class="role" style="color: var(--text-dim);">Tu historia puede estar aquí</div>
             </div>
           </div>
         </div>
@@ -2086,7 +2135,6 @@
             <li><span class="check-icon">✓</span> Todo lo del plan Professional</li>
             <li><span class="check-icon">✓</span> Automatización ilimitada</li>
             <li><span class="check-icon">✓</span> Múltiples agentes IA autónomos</li>
-            <li><span class="check-icon">✓</span> Dashboard de analytics avanzado</li>
             <li><span class="check-icon">✓</span> Dashboard de analytics avanzado</li>
             <li><span class="check-icon">✓</span> Consultor estratégico dedicado</li>
             <li><span class="check-icon">✓</span> SLA garantizado</li>
@@ -2242,13 +2290,13 @@
         </div>
         <div class="footer-col">
           <h5>Servicios</h5>
-          <a href="#servicios">Inteligencia Artificial</a>
+          <a href="#servicios">Automatización con IA</a>
           <a href="#servicios">Comercio Online</a>
-          <a href="#servicios">Automatización IA</a>
+          <a href="#servicios">Consultoría Digital</a>
         </div>
         <div class="footer-col">
           <h5>Empresa</h5>
-          <a href="#nosotros">Sobre Nosotros</a>
+          <a href="#nosotros">Sobre Mí</a>
           <a href="#planes">Planes</a>
           <a href="#testimonios">Testimonios</a>
           <a href="#faq">FAQ</a>
